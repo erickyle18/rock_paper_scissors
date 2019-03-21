@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RPS</title>
+    </head>
+    <body>
+
+
+
+
+
+        <script>
+            function computerPlay() {
+                let choice = Math.random();
+
+                if(choice <= 0.33){
+                    choice = 'Rock';
+                    console.log(`Computer Choice: ${choice}`);
+                    return choice;
+                }else if(choice > 0.33 && choice <= 0.50){
+                    choice = 'Scissors';
+                    console.log(`Computer Choice: ${choice}`);
+                    return choice;
+                }else{
+                    choice = 'Paper';
+                    console.log(`Computer Choice: ${choice}`);
+                    return choice;
+                }
+            }
+
+            function playerTurn() {
+                let turn = prompt("Enter Rock, Paper, or Scissors...", "");
+                    if(turn != null) {
+                        console.log(`Player Choice: ${turn}`);
+                        return turn;
+                    } //add else statement here for invalid input
+
+            }
+
+            function round(){
+               let p = playerTurn();
+                let c = computerPlay();
+
+                if(p === 'Rock' && c === 'Paper'){
+                    return 'You lose.';
+                }else if(p === 'Rock' && c === 'Scissors' ){
+                    return 'You win!';
+                }else if(p === 'Rock' && c === 'Rock'){
+                    return 'It\'s a tie';
+                }else if(p === 'Paper' && c === 'Rock'){
+                    return 'You win!';
+                }else if(p === 'Paper' && c === 'Scissors'){
+                    return 'You lose.';
+                }else if(p === 'Paper' && c === 'Paper'){
+                    return 'It\'s a tie';
+                }else if(p === 'Scissors' && c === 'Rock'){
+                    return 'You lose.';
+                }else if(p === 'Scissors' && c === 'Paper'){
+                    return 'You win!';
+                }else if(p === 'Scissors' && c === 'Scissors'){
+                    return 'It\'s a tie';
+                }
+                
+            }
+
+
+
+        </script>
+    </body>
+
+</html>
