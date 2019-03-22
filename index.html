@@ -60,6 +60,16 @@
                 }else if(p === 'Scissors' && c === 'Scissors'){
                     return 'It\'s a tie';
                 }
+            }
+            
+            function game(){
+                let count = 0;
+                console.log('Let\'s play 5 rounds of Rock, Paper, Scissors!!');
+                while(count <= 5){
+                    console.log(round());
+                    count++;
+                }
+
                 
             }
 
